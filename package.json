@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "node main.js",
+    "dev": "node --watch main.js"
   },
   "license": "ISC",
   "dependencies": {

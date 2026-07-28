@@ -2,10 +2,15 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/user.routes.js";
 
-const app = express();
-app.use(express.json());
-app.use(cookieParser());
+function createServer() {
+  const server = express();
 
-app.use("/api/v1", userRoutes);
+  server.use(express.json());
+  server.use(cookieParser());
 
-export default app;
+  server.use("/api/v1/auth", userRoutes);
+
+  return server;
+}
+
+export default createServer;

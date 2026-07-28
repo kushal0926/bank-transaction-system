@@ -13,7 +13,6 @@ export async function connectDB() {
 export async function disconnectDB() {
   try {
     await mongoose.disconnect();
-    console.log("database disconnected.");
   } catch (error) {
     console.error("failed to disconnect database:", error);
   }
