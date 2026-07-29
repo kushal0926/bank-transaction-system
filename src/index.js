@@ -8,6 +8,7 @@ function createServer() {
   server.use(express.json());
   server.use(cookieParser());
 
+  // routes
   server.use("/api/v1/auth", userRoutes);
 
   return server;
